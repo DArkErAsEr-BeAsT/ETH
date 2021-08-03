@@ -1,6 +1,29 @@
 # FMFP Things to Know
 
+### Typing Expressions
 
+- only give type for what is unknown, i. e. :
+
+  - ```haskell
+    map (: 1) :: [[a]] -> [[a]]
+    -- and not :
+    map (: 1) :: (a -> a) -> [[a]] -> [[a]]
+    -- since we already have the function (: 1) given, it is not unknown, no need to type it.
+    ```
+
+- respect parenthesis, i.e. :
+
+  ```haskell
+  (\f -> (\h -> (f,h))) :: a -> (b -> (a, b))
+  ```
+
+- if the expression is an if-statement, be careful that the two possibilities for the return have the same type, i.e. :
+
+  ```haskell
+  \x y z -> if z x then y x else x :: a -> (a -> a) -> (a -> Bool) -> a
+  ```
+
+  
 
 ### Typing Proof in Mini-haskell:
 

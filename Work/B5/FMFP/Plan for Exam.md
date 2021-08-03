@@ -1,6 +1,7 @@
 # Plan for Exam
 
-- [x] Typing => 12.81 % (1/2)
+- [x] Typing => 12.81 % 
+- [ ] (MAYBE Natural Deduction, but not very likely)
 - [ ] Fold Function => 2.5 %
 - [x] Induction Proof => 9.375 %
 - [ ] List Haskell => 11.56 %
@@ -13,15 +14,9 @@
 - [ ] Promela => 3.75 %
 - [x] LTL => 9.375 %
 
-
-
-
-
-
-
 ## Good for Now
 
-:large_blue_circle: =>  45 %
+​		:large_blue_circle: =>  51 %
 
 
 

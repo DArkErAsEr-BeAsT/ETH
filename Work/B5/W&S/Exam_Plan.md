@@ -1,4 +1,4 @@
-# Exam Plan W&S
+Exam Plan W&S
 
 ### Multiple Choice => 20,86 %
 
@@ -17,9 +17,11 @@
 
 
 
-### 
+### “Einfache” Wahrscheinlichkeits Aufgabe
+
+=> 75%
 
 ## Good For Now
 
-##  =>13,9 %
+##  =>13,9 % + 18.75% = 32.25%
 
