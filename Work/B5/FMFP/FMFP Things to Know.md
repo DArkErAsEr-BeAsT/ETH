@@ -1,5 +1,9 @@
 # FMFP Things to Know
 
+---
+
+## FP PART
+
 ### Typing Expressions
 
 - only give type for what is unknown, i. e. :
@@ -51,11 +55,31 @@
     node x t1 t2 = Node (f x) t1 t2
   ```
 
+##### Instantiate the type class Eq for an object:
+
+```haskell
+instance Eq a => Eq (Object) where
+ 	  (==) (type1 a) (type1 b) = a == b
+    (==) (type2 l1) (type2 l2) = all (\e -> e `elem` l2) l1 && all (\e -> e `elem` l1) l2
+    (==) _ _ = False
+```
+
+
+
 ### Induction Proof
 
-- If the lemma has a number in it (i.e. 0) then first prove the general lemma by replacing the number by *n*, then you can use the general lemma to prove the particular case.
+- If the lemma has a number in it (i.e. 0) then first prove the general lemma by replacing the number by *n*, then you can use the general lemma to prove the particular case. Same with an empty list, first replace by normal list ys.
 
+---
 
+## FM PArt
+
+### Small Steps Proof
+
+$
+\displaystyle \langle s, \sigma\rangle\rightarrow_1\langle \text{if}\: x>0\: \text{then}\: x:=3-2*x;\: s\: \text{else}\: skip\: \text{end}, \sigma\rangle \\ \qquad \>\> \rightarrow_1\langle x:=3-2*x;s\: , \sigma\rangle\\ 
+\qquad \>\>  \rightarrow_1\langle s,\sigma [x\rightarrow 1]\rangle
+$
 
 ### Big-Step Semantics Proof (While Property)
 
@@ -71,3 +95,7 @@
   - *Then we can construct a derivation tree T’* (write tree for RHS that ends in $T_1’,T_2'$).
   - *By instantiating the quatified variables (sigmas and b’s) and using the other conditions from the property $P(T_2)$ must hold by  induction hypothesis. Therefore there exists a derivation tree $T¨$ ... By choosing $T_2’=T¨$ the claim is satisfied and case is concluded.*
 
+### Safety & Liveness Properties
+
+- A formula is a liveness property if we can extend any finite string such that it does not violate the property
+- A formula is a safety property if whenever it is violated for some instance then it must be violated in a finite prefix of that instance
