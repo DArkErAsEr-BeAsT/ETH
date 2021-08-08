@@ -1,6 +1,6 @@
 # Plan for Exam
 
-- [x] Typing => 12.81 % 
+- [x] Typing (second part also now) => 12.81 % 
 - [ ] (MAYBE Natural Deduction, but not very likely)
 - [ ] Fold & map Function => 2.5 % (2/3)
 - [x] Induction Proof => 9.375 %
@@ -18,7 +18,35 @@
 
 ​		:large_blue_circle: =>  55.5 %
 
+# TODO
+
+## Part 1 -> 30/40
+
+### Typing 
+
+=> Can do all 4 except maybe last one
+
+### (Natural Deduction)
+
+=> Nope (not yet)
+
+### Mini-Haskell
+
+=> should be good
+
+### Induction Proof
+
+=> good 
+
+### List Programming
+
+=> good except maybe most difficult , but takes time
+
+### Fold Function
+
+=> keep 10 minutes for the end to bullshit, except if it is a standard one.
 
 
 
+## Part 2 ->
 

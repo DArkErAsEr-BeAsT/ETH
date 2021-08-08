@@ -70,6 +70,45 @@ instance Eq a => Eq (Object) where
 
 - If the lemma has a number in it (i.e. 0) then first prove the general lemma by replacing the number by *n*, then you can use the general lemma to prove the particular case. Same with an empty list, first replace by normal list ys.
 
+### Haskell Programming
+
+#### Most Important Prelude Functions
+
+- scanl : takes function, start element and array, and applies function to element and 1st of array ... and returns array of results.
+
+- foldl: same as scanl, only that it returns single value not an array : result of function application to all elements together
+
+- ```haskell
+  map f (x:xs) = f x : map f xs
+  
+  ```
+
+- Filter: remove elements of xs that do not return true when the funciton is applied to them and return resulting array
+
+- Concat: turn array of arrays to single array
+
+- Iterate: creates infinite list where the first item is calculated by appliying the function to second arg...
+
+- Take: take  the n first elements of list
+
+- Drop: drop n first elements of list
+
+- Zip: takes two lists and returns list of tuples of one element of each list
+
+- Zip with: takes a function and two lists, returns a list of the function applied to one of each list.
+
+- Takewhile : only takes n first elements that return true when the function is applied to them
+
+- dropwhile : “”
+
+- Until: applies function to the 3rd arg and it compares the result with the condition, if the condition returns true it prints the result, else it passes the result to the function and repeats the cycle.
+
+- Sort: sorts list
+
+- Maybe Type : Nothing / Just x
+
+- 
+
 ---
 
 ## FM PArt
