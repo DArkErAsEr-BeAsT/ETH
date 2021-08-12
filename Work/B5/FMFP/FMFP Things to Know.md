@@ -69,6 +69,31 @@ instance Eq a => Eq (Object) where
 ### Induction Proof
 
 - If the lemma has a number in it (i.e. 0) then first prove the general lemma by replacing the number by *n*, then you can use the general lemma to prove the particular case. Same with an empty list, first replace by normal list ys.
+- Example:
+
+```haskell
+Lemma: (take n xs) ++ (drop n xs) .=. xs
+
+Proof by induction on List xs generalizing n
+
+Case []
+    For fixed n
+    Show: (take n []) ++ (drop n []) .=. []
+    Proof
+    QED
+
+Case x:xs
+    Fix x, xs
+    Assume
+        IH: forall n: (take n xs) ++ (drop n xs) .=. xs
+    Then for fixed n Show: (take n (x:xs)) ++ (drop n (x:xs)) .=. (x:xs)
+    Proof
+
+    QED
+QE
+```
+
+
 
 ### Haskell Programming
 
@@ -107,18 +132,46 @@ instance Eq a => Eq (Object) where
 
 - Maybe Type : Nothing / Just x
 
-- 
+- Div: (same for mod)
+
+  ```haskell
+  (number to divide) `div`(number to divide by)
+  ```
+
+  => mod returns the remainder, div returns the result of the division.
+
+
+
+#### Show Instantiation
+
+```haskell
+instance (Show a) => Show (F a)
+  where
+```
+
+After just use the fold function defined earlier and gice corresponding arguments to print the correct strings.
 
 ---
 
 ## FM PArt
 
-### Small Steps Proof
+### Small Steps Semantics
 
-$
-\displaystyle \langle s, \sigma\rangle\rightarrow_1\langle \text{if}\: x>0\: \text{then}\: x:=3-2*x;\: s\: \text{else}\: skip\: \text{end}, \sigma\rangle \\ \qquad \>\> \rightarrow_1\langle x:=3-2*x;s\: , \sigma\rangle\\ 
-\qquad \>\>  \rightarrow_1\langle s,\sigma [x\rightarrow 1]\rangle
-$
+- $
+  \displaystyle \langle s, \sigma\rangle\rightarrow_1\langle \text{if}\: x>0\: \text{then}\: x:=3-2*x;\: s\: \text{else}\: skip\: \text{end}, \sigma\rangle \\ \qquad \>\> \rightarrow_1\langle x:=3-2*x;s\: , \sigma\rangle\\ 
+  \qquad \>\>  \rightarrow_1\langle s,\sigma [x\rightarrow 1]\rangle
+  $
+
+
+$$
+\cfrac
+{\cfrac{\cfrac{}{\langle x:=3,\sigma\rangle \rightarrow_1\sigma[x\mapsto3]}ASS_{SOS}}{\langle x:=3;y:=4, \sigma\rangle \rightarrow_1 \langle y:=4,\sigma[x \mapsto3] \rangle}SEQ1_{SOS}}
+{\langle (x:=3;y:=4);s_{loop}, \sigma\rangle \rightarrow_1 \langle y:=4; s_{loop},\sigma[x \mapsto3] \rangle} SEQ2_{SOS}
+$$
+
+- **Semantic Equivalence** = $s_1, s_2$ are semantically equivalent $\equiv$ $\forall \sigma , \sigma'.(⊢ <s_1, /sigma> \rightarrow \sigma' \Leftrightarrow <s_2,\sigma> \rightarrow \sigma')$​​
+
+=> Same for Big Step Semantics
 
 ### Big-Step Semantics Proof (While Property)
 
@@ -132,7 +185,12 @@ $
   - *hence the derivation tree T with root(T)... looks as follows* : (use while true rule and then eventually develop another rule because of the statement inside the while loop)
   - Then end with $T_1,T_2$ (or more/less depending on the case) for some state $\sigma_1$
   - *Then we can construct a derivation tree T’* (write tree for RHS that ends in $T_1’,T_2'$).
-  - *By instantiating the quatified variables (sigmas and b’s) and using the other conditions from the property $P(T_2)$ must hold by  induction hypothesis. Therefore there exists a derivation tree $T¨$ ... By choosing $T_2’=T¨$ the claim is satisfied and case is concluded.*
+  - *By instantiating the quatified variables (sigmas and b’s) and using the other conditions from the property $P(T_2)$​ must hold by  induction hypothesis. Therefore there exists a derivation tree $T¨$​ ... By choosing $T_2’=T¨$​ the claim is satisfied and case is concluded.*
+
+### Axiomatic Semantics / Hoarre Triple Proofs
+
+- Total Correctness : don’t forget if we have `while i < k`, then for the conditions inside the while loop we need : {Z=i - k} , Z a fresh variable, and at the end : {i - k < Z}
+- **Semantic Equivalence** = $s_1, s_2$ are semantically equivalent $\equiv$ $\forall P,Q. ⊢ \{P\} s_1 \{Q\} \Leftrightarrow \{P\}s_2 \{Q\}$
 
 ### Safety & Liveness Properties
 

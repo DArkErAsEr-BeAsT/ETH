@@ -1,4 +1,4 @@
-Exam Plan W&S
+# Exam Plan W&S
 
 ### Multiple Choice => 20,86 %
 
@@ -21,7 +21,15 @@ Exam Plan W&S
 
 => 75%
 
+### Schwere Wahrscheinlichkeit Aufgabe
+
+=> 20%
+
+### Test Aufgabe
+
+=> 75%
+
 ## Good For Now
 
-##  =>13,9 % + 18.75% = 32.25%
+##  =>13,9 % + 18.75% + 18%+ 10%= 60.25%
 
