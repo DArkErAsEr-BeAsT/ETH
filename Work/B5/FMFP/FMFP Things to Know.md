@@ -140,7 +140,7 @@ QE
 
   => mod returns the remainder, div returns the result of the division.
 
-
+L
 
 #### Show Instantiation
 
@@ -187,7 +187,7 @@ $$
   - *Then we can construct a derivation tree T’* (write tree for RHS that ends in $T_1’,T_2'$).
   - *By instantiating the quatified variables (sigmas and b’s) and using the other conditions from the property $P(T_2)$​ must hold by  induction hypothesis. Therefore there exists a derivation tree $T¨$​ ... By choosing $T_2’=T¨$​ the claim is satisfied and case is concluded.*
 
-### Axiomatic Semantics / Hoarre Triple Proofs
+### Axiomatic Semantics / Hoare Triple Proofs
 
 - Total Correctness : don’t forget if we have `while i < k`, then for the conditions inside the while loop we need : {Z=i - k} , Z a fresh variable, and at the end : {i - k < Z}
 - **Semantic Equivalence** = $s_1, s_2$ are semantically equivalent $\equiv$ $\forall P,Q. ⊢ \{P\} s_1 \{Q\} \Leftrightarrow \{P\}s_2 \{Q\}$
@@ -196,3 +196,5 @@ $$
 
 - A formula is a liveness property if we can extend any finite string such that it does not violate the property
 - A formula is a safety property if whenever it is violated for some instance then it must be violated in a finite prefix of that instance
+  => any prefix that breaks the condition cannot be fixed with any following sequence
+

@@ -17,9 +17,33 @@
 
 
 
+### Easy Probability Question => 25%
+
 ### 
+
+### Test-Statistik Question => 25%
+
+- [x] Testart, und einseitig oder zweiseitig
+
+- [x] Hypothesendefinition
+
+- [x] Teststatistik + Verteilung
+
+- [ ] Vewerfungsbereich
+
+- [ ] P[Feheler 1. Art]
+
+- [ ] P[Fehler 2. Art]
+
+- [x] Testentscheid
+
+- [ ] Signifikanzniveau
+
+- [x] Maximum-Likelihood Schaetzer
+
+  
 
 ## Good For Now
 
-##  =>13,9 %
+##  =>25,9 %
 

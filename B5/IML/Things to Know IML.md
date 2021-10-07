@@ -392,7 +392,7 @@ Idea: Modify the perceptron or SVM to take the class imbalance into account.
 
 ##### 4. F1-Score
 
-=> the harmonic avergae of precision and recall
+=> the harmonic average of precision and recall
 
 #### Tradeoffs
 
@@ -429,6 +429,10 @@ Idea: maintain n weight vectors, one for each class => multi-class hinge loss fu
 
 - Composed of modules called hidden layers
 - Able to approximate non-linear functions.
+
+### Vanishing Gradients Problem
+
+A problem with training networks is that with many layers is that the gradient diminishes drastically as it is propagated backward through the network. Hence the propagated error might be so small by the time it reaches layers close to the input that it may have little effect on the final output.
 
 ### Activation Functions
 
@@ -511,7 +515,7 @@ Another approach is to penalise the number of clusters to keep the model simple.
 
 Goal: Given a dataset $D=x_1...x_n, D \in \R^d$ obtain a low dimensional representation $\in \R^k, k<d$. This reduction should compress the data but still allow a sufficiently accurate reconstruction.
 
-### Linear : Principle Component Analysis
+### Linear : Principal Component Analysis
 
 This is a statistical procedure to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables using an orthogonal transformation.
 
@@ -586,7 +590,22 @@ A method that determines values for the parameters of a model, and they are foun
 
 How: we want to calculate the total probability of observing all the data.
 For a Gaussian distribution : $P(x; \mu,\sigma)= \frac {1} {\mu \sqrt {2 \pi}} exp(-\frac {(x-\mu)^2}{2\sigma^2})$. 
-Then perform derivation in order to find the values for $\mu, \sigma$.
+Then perform derivation in order to find the values for $\mu, \sigma$​.
+
+### Receiver Operating Curve
+
+It is a plot of the false positive rate versus the true positive rate, with: 
+True Positive Rate = True Positives / (True Positives + False Negatives) => also called sensitivity. 
+And the False Positive Rate = True Negatives / (True Negatives + False Positives) => inverted specifity
+
+**Advantages :** 
+
+- the curves of different models can be compared directly.
+
+#### Area Under the Curve
+
+The measure of the ability of a classifier to distinguish between classes, it is used as a summary of the ROC curve.
+The higher the AUC, the better the performance of the model at distinguishing between the positive and negative classes
 
 ### Bias-Variance Tradeoff
 
@@ -600,7 +619,7 @@ Let h be the optimal hypothesis when knowing $P(X,Y)$:
 
 ### Statistical Perspective on Ridge Regression
 
-Idea: Recall that ridge regression was introduced as a way to avoid overfitting when solving linear regression otpimization problems, and now we want. to solve the same problem from a probabilistic perspective.
+Idea: Recall that ridge regression was introduced as a way to avoid overfitting when solving linear regression otpimization problems, and now we want to solve the same problem from a probabilistic perspective.
 
 Use a **Maximum A Posteriori Estimation** : given some prior distribution $P(\Theta)$, we can treat $\Theta$ as a random variable and thus we can use Bayes’ Theorem to compute the posterior distribution of it.
 

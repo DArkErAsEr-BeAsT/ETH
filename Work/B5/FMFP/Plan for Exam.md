@@ -50,3 +50,13 @@
 
 ## Part 2 ->
 
+### Small Step Semantics Proof
+
+=> Proof Steps are easy, but justifying each step using derivation tree is hard, skip and use 3 minutes at then end.
+
+### Axiomatic Semantics Proof
+
+=> Hard, also not a priority but keep 5~10 minutes to bullshit something
+
+
+
