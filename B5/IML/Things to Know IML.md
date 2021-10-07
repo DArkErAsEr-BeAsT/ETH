@@ -60,7 +60,7 @@ Attempts to model the relationship between two varaiables by fitting a linear eq
 
 ##### Goodness of the Fit
 
-Is foud by finding the representation that gives the smallest residual : $$r_i=y_i-w^Tx_i$$. The optimal weight vector can be found via the least-squares method, using one of two approaches :
+xIs foud by finding the representation that gives the smallest residual : $$r_i=y_i-w^Tx_i$$. The optimal weight vector can be found via the least-squares method, using one of two approaches :
 
 - Closed Form : solve $$w*=(X^TX)^{-1}X^Ty$$ , with $$X$$ a matrix consisting of rows of $$x_i$$
 - Optimisation : by gradient descent.

@@ -17,9 +17,31 @@
 
 
 
+<<<<<<< HEAD
 ### Easy Probability Question => 25%
 
 ### 
+=======
+### “Einfache” Wahrscheinlichkeits Aufgabe
+
+=> 75%
+
+### Schwere Wahrscheinlichkeit Aufgabe
+
+Funktion von Zufallsvariablen => Dichte, Randdichte, ...
+
+=> 20%
+
+### Test Aufgabe
+
+Test Durchführen & Beschreiben :white_check_mark:
+
+Schätzer beweisen :no_entry_sign:
+
+
+
+=> 75%
+>>>>>>> refs/remotes/origin/main
 
 ### Test-Statistik Question => 25%
 
@@ -45,5 +67,9 @@
 
 ## Good For Now
 
+<<<<<<< HEAD
 ##  =>25,9 %
+=======
+##  =>13,9 % + 18.75% + 18%+ 10%= 60.25%
+>>>>>>> refs/remotes/origin/main
 
