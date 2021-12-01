@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "jemula802/src/layer2_802Algorithms"
+		},
+		{
+			"path": "jemula802/src/layer2_802Mac"
+		},
+		{
+			"path": "jemula802/src/layer2_80211Mac"
+		},
+		{
+			"path": "jemula802/src/layer1_802Phy"
+		},
+		{
+			"path": "jemula802/src/layer1_80211Phy"
+		}
+	]
+}
